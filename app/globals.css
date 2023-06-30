@@ -24,4 +24,72 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  color: #bbb;
+}
+
+.theme {
+  transition: 1s all ease;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: --foreground-rgb;
+  color: #bbb;
+}
+
+/* portfolio page */
+.items {
+  border: 5px solid #bbb;
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background-size: cover !important;
+  margin-right: 30px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.items:nth-child(1) {
+  background: url("/web.jpg");
+}
+.items:nth-child(2) {
+  background: url("/web2.jpg");
+}
+.items:nth-child(3) {
+  background: url("/web3.jpg");
+}
+
+.title {
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+.items:hover {
+  transform: scale(1.1);
+}
+
+/* category */
+.item {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.item:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+/* gradient text */
+.grad {
+  background: linear-gradient(to bottom, #194c33, #bbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
